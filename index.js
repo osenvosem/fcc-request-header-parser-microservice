@@ -1,19 +1,19 @@
-const express = require('express')
+const express = require("express");
 
-const app = express()
+const app = express();
 
 function getInfo(req) {
-  const ua = req.headers['user-agent']
+  const ua = req.headers["user-agent"];
   return {
-    ipaddress: req.headers['x-forwarded-for'] || req.ip,
+    ipaddress: req.headers["x-forwarded-for"] || req.ip,
     language: req.acceptsLanguages()[0],
-    software: ua.slice(ua.indexOf('(') + 1, ua.indexOf(')'))
-  }
+    software: ua.slice(ua.indexOf("(") + 1, ua.indexOf(")"))
+  };
 }
 
 // home page
-app.get('/', (req, res) => {
-  const clientData = getInfo(req)
+app.get("/", (req, res) => {
+  const clientData = getInfo(req);
 
   const page = `
     <!DOCTYPE html>
@@ -38,11 +38,11 @@ app.get('/', (req, res) => {
       <a href="/whoami">Get JSON</a>
     </body>
     </html>
-  `
+  `;
 
-  res.send(page)
-})
+  res.send(page);
+});
 
-app.get('/whoami', (req, res) => res.send(getInfo(req)))
+app.get("/whoami", (req, res) => res.send(getInfo(req)));
 
-app.listen(process.env.PORT || 3000)
+app.listen(process.env.PORT || 3000);

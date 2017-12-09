@@ -2,8 +2,10 @@
   "name": "fcc-request-header-parser-microservice",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/osenvosem/fcc-request-header-parser-microservice",
-  "author": "Sergey Samsonov <osenvosem@gmail.com>",
+  "repository":
+    "https://github.com/osenvosem/fcc-request-header-parser-microservice",
+  "author":
+    "Sergei Samsonov <osenvosem@gmail.com> (https://github.com/osenvosem)",
   "license": "MIT",
   "scripts": {
     "start": "node index.js",
