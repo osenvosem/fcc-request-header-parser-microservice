@@ -27,7 +27,7 @@ app.get("/", (req, res) => {
       <style>body {font: 1em "Open Sans"; margin: 40px}</style>
     </head>
     <body>
-      <h2>Free Code Camp :: Request Header Parser Microservice/h2>
+      <h2>Free Code Camp :: Request Header Parser Microservice</h2>
       <hr>
       <ul>
         <li>Your IP Address is <em>${clientData.ipaddress}</em></li>
